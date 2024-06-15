@@ -6,6 +6,11 @@ import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Area from "./scenes/area";
+import Bump from "./scenes/bump";
+import Chord from "./scenes/chord";
+import Bubble from "./scenes/bubble";
+import Network from "./scenes/network";
+import Geography from "./scenes/geography";
 // import Contacts from "./scenes/contacts";
 // import Invoices from "./scenes/invoice";
 // import Form from "./scenes/form";
@@ -29,6 +34,11 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/area" element={<Area />} />
+              <Route path="/chord" element={<Chord />} />
+              <Route path="/bump" element={<Bump />} />
+              <Route path="/bubble" element={<Bubble />} />
+              <Route path="/network" element={<Network />} />
+              <Route path="/geography" element={<Geography />} />
               {/* <Route path="/contacts" element={<Contacts />} /> */}
               {/* <Route path="/invoices" element={<Invoices />} /> */}
               {/* <Route path="/form" element={<Form />} /> */}

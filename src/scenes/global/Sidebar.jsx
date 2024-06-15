@@ -108,15 +108,15 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h7" color={colors.mainBlue[600]}>
-                  2024
-                </Typography>
                 <IconButton
                   onClick={handleToggle}
                   style={{ color: colors.mainBlue[600] }}
                 >
                   <MenuOutlinedIcon />
                 </IconButton>
+                <Typography variant="h7" color={colors.mainBlue[600]}>
+                  2024
+                </Typography>
               </Box>
             )}
           </MenuItem>
@@ -197,6 +197,13 @@ const Sidebar = () => {
               Charts
             </Typography>
             <Item
+              title="Area Chart"
+              to="/area"
+              icon={<AreaChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Chord Chart"
               to="/chord"
               icon={<ChordOutlinedIcon />}
@@ -214,13 +221,6 @@ const Sidebar = () => {
               title="Bump Chart"
               to="/bump"
               icon={<SsidChartIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Area Chart"
-              to="/area"
-              icon={<AreaChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

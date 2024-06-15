@@ -1,13 +1,20 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import BodyText from "../../components/BodyText";
+import { Link } from "react-router-dom";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import { useState, useEffect } from "react";
+import AreaChart from "../../components/AreaChart";
+import BumpChart from "../../components/BumpChart";
+import ChordDiagram from "../../components/ChordDiagram";
+import BubbleChart from "../../components/BubbleChart";
+import NetworkChart from "../../components/NetworkChart";
+import GeoChart from "../../components/GeoChart";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -55,7 +62,7 @@ const Dashboard = () => {
             md={12} // one-third width on medium screens
             lg={12} // one-fourth width on large screens
           >
-            <Typography>This Dashboard is about AI Coworking</Typography>
+            <BodyText text="This is Sample Text This is Sample Text This is Sample Text This is Sample Text This is Sample Text This is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample TextThis is Sample Text" />
             <Divider sx={{ borderColor: colors.mainBlue[600] }} />
           </Grid>
           <Grid
@@ -65,7 +72,7 @@ const Dashboard = () => {
             lg={4} // one-fourth width on large screens
           >
             <Box
-              height={200}
+              height={300}
               my={2}
               display="flex"
               alignItems="center"
@@ -79,7 +86,7 @@ const Dashboard = () => {
               component={Link}
               to="/area"
             >
-              Area Chart
+              <AreaChart isDashboard={true} />
             </Box>
           </Grid>
           <Grid
@@ -89,15 +96,17 @@ const Dashboard = () => {
             lg={4} // one-fourth width on large screens}
           >
             <Box
-              height={200}
+              height={300}
               my={2}
               display="flex"
               alignItems="center"
               gap={4}
               p={2}
               sx={{ border: "2px solid grey" }}
+              component={Link}
+              to="/chord"
             >
-              Chord Chart
+              <ChordDiagram isDashboard={true} />
             </Box>
           </Grid>
           <Grid
@@ -107,15 +116,17 @@ const Dashboard = () => {
             lg={4} // one-fourth width on large screens
           >
             <Box
-              height={200}
+              height={300}
               my={2}
               display="flex"
               alignItems="center"
               gap={4}
               p={2}
               sx={{ border: "2px solid grey" }}
+              component={Link}
+              to="/bubble"
             >
-              Bubble Chart
+              <BubbleChart isDashboard={true} />
             </Box>
           </Grid>
           <Grid xs={12}>
@@ -127,8 +138,10 @@ const Dashboard = () => {
               gap={4}
               p={2}
               sx={{ border: "2px solid grey" }}
+              component={Link}
+              to="/geography"
             >
-              World Map
+              <GeoChart isDashboard={true} />
             </Box>
           </Grid>
           <Grid
@@ -138,15 +151,17 @@ const Dashboard = () => {
             lg={6} // one-fourth width on large screens
           >
             <Box
-              height={200}
+              height={400}
               my={2}
               display="flex"
               alignItems="center"
               gap={4}
               p={2}
               sx={{ border: "2px solid grey" }}
+              component={Link}
+              to="/bump"
             >
-              Bump
+              <BumpChart isDashboard={true} />
             </Box>
           </Grid>
           <Grid
@@ -156,15 +171,17 @@ const Dashboard = () => {
             lg={6} // one-fourth width on large screens
           >
             <Box
-              height={200}
+              height={400}
               my={2}
               display="flex"
               alignItems="center"
               gap={4}
               p={2}
               sx={{ border: "2px solid grey" }}
+              component={Link}
+              to="/network"
             >
-              Network Chart
+              <NetworkChart isDashboard={true} />
             </Box>
           </Grid>
         </Grid>

@@ -3,22 +3,22 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
-import AreaChart from "../../components/AreaChart";
+import NetworkChart from "../../components/NetworkChart";
 import BodyText from "../../components/BodyText";
 
-const Area = () => {
+const Network = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
     <Box m="20px" height="70vh">
-      <Header title="AREA Function" subtitle="List of Contacts for Future" />
+      <Header title="Network Function" subtitle="List of Contacts for Future" />
 
       <Box display="flex" justifyContent="center" height="100%">
         <Box width="83%">
-          <BodyText text="This is Area Chart for the Data" />
+          <BodyText text="This is Network Chart for the Data" />
           <Box flexGrow={1}>
-            <AreaChart />
+            <NetworkChart />
           </Box>
         </Box>
       </Box>
@@ -26,4 +26,4 @@ const Area = () => {
   );
 };
 
-export default Area;
+export default Network;
